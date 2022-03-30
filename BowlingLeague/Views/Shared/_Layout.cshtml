@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>
+            @ViewBag.Title
+        </title>
+
+
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+
+<body>
+    <div class="bg-dark text-white p-2">
+        <h1><span class="navbar-brand ml-2">Bowling League</span></h1>
+    </div>
+    <div class="row m-1 p-1">
+        @*vc allows app to access vie component to bring in team names and selected team*@
+        <div id="teams" class="col-3">
+            <h1><vc:teams></vc:teams></h1>
+        </div>
+        <div class="col-9">
+            <div id="label" class="text-lg-left font-weight-bold">
+                <h1><vc:label></vc:label></h1>
+                </div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+
+</html>
